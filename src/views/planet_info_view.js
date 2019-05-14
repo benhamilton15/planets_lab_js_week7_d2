@@ -17,13 +17,14 @@ PlanetInfoView.prototype.render = function(planet){
     for (key in planet) {
         if (key === 'image'){
             const infoImage = document.createElement('img')
-            elem.setAttribute("src", `${planet.image}`)
+            infoImage.setAttribute("src", `${planet.image}`)
+            console.log(planet.image)
             this.container.appendChild(infoImage)
         }
         else {
             const infoParagraph = document.createElement('li')
-        infoParagraph.textContent = `${planet[key]}`
-        this.container.appendChild(infoParagraph)
+            infoParagraph.textContent = `${planet[key]}`
+            this.container.appendChild(infoParagraph)
         }
     }
 }
